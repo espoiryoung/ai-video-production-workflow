@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Private Studio — 로그인</title><link rel="stylesheet" href="/assets/styles.css"></head>
+<body class="login-page">
+  <main class="login-card">
+    <div class="brand-mark">HF</div>
+    <p class="eyebrow">PERSONAL GENERATION STUDIO</p>
+    <h1>당신만의 영상<br>작업실.</h1>
+    <p class="muted">서버에 설정된 비밀번호로 접속하세요.</p>
+    <form id="login-form" class="login-form">
+      <label>비밀번호<input name="password" type="password" autocomplete="current-password" autofocus required placeholder="••••••••••••"></label>
+      <p id="login-error" class="error" hidden></p>
+      <button class="primary" type="submit">스튜디오 열기 <span>→</span></button>
+    </form>
+  </main>
+  <script>document.querySelector('#login-form').addEventListener('submit',async e=>{e.preventDefault();const b=e.submitter;b.disabled=true;const r=await fetch('/api/login',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({password:new FormData(e.target).get('password')})});const j=await r.json();if(r.ok)location.href='/';else{const n=document.querySelector('#login-error');n.textContent=j.error;n.hidden=false;b.disabled=false}})</script>
+</body></html>

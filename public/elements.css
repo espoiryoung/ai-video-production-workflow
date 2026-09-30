@@ -1,0 +1,18 @@
+.element-image {
+  position: relative;
+}
+
+.element-card .element-image img {
+  display: block;
+}
+
+.image-count {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: #141412;
+  color: #fff;
+  font: 10px "DM Mono";
+}

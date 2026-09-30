@@ -1,0 +1,15 @@
+.env*
+!.env.example
+node_modules/
+data/
+uploads/
+dist/
+.DS_Store
+AGENTS.md
+sources/
+references/
+workflows/
+Chwippogogo_Reference_Workflow/
+Chwippogogo_Reference_Workflow.zip
+character_reference_spec.md
+*.log

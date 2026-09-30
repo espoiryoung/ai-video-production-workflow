@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI Video Workflow</title><link rel="stylesheet" href="/workflow.css?v=3"><style>html{background:#f3f2ee}body{margin:0;font-family:Inter,system-ui,sans-serif}.page{display:none}.page.active{display:block}</style></head>
+<body>
+  <header class="topbar"><a class="brand" href="/"><span class="mark">HF</span><span>PRODUCTION FLOW</span></a><nav><button data-page="scenes" class="active">Scenes</button><button data-page="presets">Presets</button><a href="/classic">Classic Studio ↗</a></nav><button id="logout" class="ghost">로그아웃</button></header>
+  <main>
+    <section id="page-scenes" class="page active">
+      <div class="heading"><div><p class="eyebrow">AI VLOG PRODUCTION</p><h1>Scene에서 최종 Take까지.</h1><p>에셋 → 프롬프트 → 생성 → 평가 → 보정 → 재생성을 한 흐름으로 관리합니다.</p></div><button id="new-scene" class="primary">+ 새 Scene</button></div>
+      <div class="workspace"><aside class="scene-list"><div class="list-head"><strong>취뽀고고</strong><span id="scene-count"></span></div><div id="scene-list"></div></aside><section id="scene-editor" class="editor"><div class="empty">Scene을 만들거나 선택하세요.</div></section></div>
+    </section>
+    <section id="page-presets" class="page"><div class="heading"><div><p class="eyebrow">REUSABLE RULES</p><h1>Preset Library</h1><p>카메라, 일관성, 실패 보정 규칙을 직접 관리합니다.</p></div></div><div id="preset-columns" class="preset-columns"></div></section>
+  </main>
+  <dialog id="preset-dialog"><form method="dialog" id="preset-form"><input type="hidden" name="kind"><input type="hidden" name="id"><h2>Preset</h2><label>이름<input name="name" required></label><label>내용<textarea name="text" rows="8" required></textarea></label><div class="dialog-actions"><button type="button" id="cancel-preset" class="ghost">취소</button><button value="default" id="save-preset" class="primary">저장</button></div></form></dialog>
+  <div id="toast" class="toast"></div><script type="module" src="/workflow.js?v=3"></script>
+</body></html>

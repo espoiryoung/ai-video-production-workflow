@@ -1,0 +1,45 @@
+.price-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 20px;
+  border: 1px solid #d6d1c5;
+  border-radius: 12px;
+  background: #f0f6df;
+}
+
+.price-card .section-label {
+  margin: 0 0 6px;
+}
+
+#estimated-price {
+  margin-right: 9px;
+  font: 600 28px "DM Mono";
+}
+
+#price-formula,
+.price-meta {
+  color: #77736b;
+  font-size: 11px;
+}
+
+.price-meta {
+  display: flex;
+  max-width: 380px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  text-align: right;
+}
+
+.price-meta a {
+  color: #ff5a36;
+  font: 500 10px "DM Mono";
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .price-card { align-items: flex-start; flex-direction: column; }
+  .price-meta { align-items: flex-start; text-align: left; }
+}
